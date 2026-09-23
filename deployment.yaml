@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+
+metadata:
+  name: mydeployment
+
+spec:
+  replicas: 2
+
+  selector:
+    matchLabels:
+      app: dheeraj
+
+  template:
+    metadata:
+      labels:
+        app: dheeraj
+
+    spec:
+      containers:
+        - name: my-website
+          image: YOUR_DOCKERHUB_USERNAME/my-website:latest
+
+          ports:
+            - containerPort: 80
