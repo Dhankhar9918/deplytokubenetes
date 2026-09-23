@@ -19,7 +19,7 @@ spec:
     spec:
       containers:
         - name: my-website
-          image: YOUR_DOCKERHUB_USERNAME/my-website:latest
+          image: dhankhar9918/deploytokubenetes:dheeraj
 
           ports:
             - containerPort: 80
